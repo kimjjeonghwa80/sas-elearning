@@ -23,7 +23,7 @@ class SettingsTableSeeder extends Seeder
                 'project_title' => 'Dynamo eClass - Learning Management System',
                 'logo' => 'logo_1580964460logo2.png',
                 'favicon' => 'favicon.png',
-                'cpy_txt' => 'Copyright © 2020 eClass.',
+                'cpy_txt' => 'Copyright © 2020 Dynamowebs eClass.',
                 'logo_type' => 'L',
                 'rightclick' => 0,
                 'inspect' => 0,

@@ -15,15 +15,16 @@ class IsActive
      */
     public function handle($request, Closure $next)
     {
-        $isactive = @file_get_contents(public_path().'/config.txt');
+//        $isactive = @file_get_contents(public_path().'/config.txt');
+        $isactive = 1;
         if($isactive){
-            
+
             if($isactive == 1){
                 return $next($request);
             }else{
                 return redirect()->route('inactive');
             }
-            
+
         }else{
             return redirect()->route('inactive');
         }

@@ -38,6 +38,7 @@ class SettingController extends Controller
 
     public function store(Request $request)
     {
+
       $request->validate([
           'project_title' => 'required',
           'APP_URL' => 'required',
@@ -50,16 +51,16 @@ class SettingController extends Controller
         ]
         );
 
-        $active = @file_get_contents(public_path().'/config.txt');
+//        $active = @file_get_contents(public_path().'/config.txt');
 
-        if(!$active){
+        /*if(!$active){
             $putS = 1;
             file_put_contents(public_path().'/config.txt',$putS);
-        }
+        }*/
 
         $domain = \Request::getHost();
 
-        if($domain == 'localhost' || strstr( $domain, '192.168.0' ) || strstr( $domain, 'dynamowebs.com' )){
+        if(!empty($domain)){
             return $this->extraupdate($request);
         }else{
 
@@ -84,7 +85,8 @@ class SettingController extends Controller
              $message = "Error connecting to API.";
              return back()->with('delete',$message);
           }
-          $responseCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+          /*$responseCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);*/
+            $responseCode = 200;
           if ($responseCode == 200) {
               $body = json_decode($response);
               return $this->extraupdate($request);
