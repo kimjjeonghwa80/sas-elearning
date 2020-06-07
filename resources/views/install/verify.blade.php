@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="{{ url('installer/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url('installer/css/shards.min.css') }}">
     <link rel="stylesheet" href="{{ url('installer/css/custom.css') }}">
-    <title>Installing App - Step - Envato Purchase Details</title>    
+    <title>Installing App - Step - Envato Purchase Details</title>
   </head>
   <body>
-      
+
       <div class="preL display-none">
         <div class="preloader3 display-none"></div>
       </div>
@@ -25,12 +25,12 @@
               </h3>
           </div>
           <div class="card-body" id="stepbox">
-               <form action="{{url('verifycode')}}" id="stepvform" method="POST" class="needs-validation" novalidate>                  
+               <form action="{{url('verifycode')}}" id="stepvform" method="POST" class="needs-validation" novalidate>
                   {{ csrf_field() }}
                    <h3>Envato Purchase details</h3>
                    <hr>
                   <div class="form-row">
-                   
+
                     <br>
                     <div class="col-md-6 mb-3">
                       <label for="validationCustom01">Envato User Name:</label>
@@ -49,22 +49,22 @@
                         Looks good!
                       </div>
                       <div class="invalid-feedback">
-                      </div>                          
+                      </div>
                         @if($errors->any())
                           <h6 class="text-danger alert alert-error">{{$errors->first()}}</h6>
                         @endif
 
                         <br>
                         <a href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code" target="_blank">Where Is My Purchase Code ??</a>
-                    </div>                    
+                    </div>
                   </div>
                 <button class="float-right step1btn btn btn-primary" type="submit">Continue to Next Step...</button>
               </form>
           </div>
         </div>
-        <p class="text-center m-3 text-white">&copy;{{ date('Y') }} | eClass - Learning Management System | Installer v1.0 | <a class="text-white" href="http://mediacity.co.in">Mediacity</a></p>
+        <p class="text-center m-3 text-white">&copy;{{ date('Y') }} | Dynamo eClass - Learning Management System | Installer v1.0 | <a class="text-white" href="http://dynamowebs.com"Dynamowebs/a></p>
       </div>
-      
+
       <div class="corner-ribbon bottom-right sticky green shadow">License</div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="{{ url('installer/js/jquery-3.4.1.min.js') }}"></script>
@@ -78,7 +78,7 @@
     <script src="{{ url('js/shards.min.js') }}"></script>
     @yield('script-zone')
     <script>
-      
+
       (function() {
         'use strict';
         window.addEventListener('load', function() {
@@ -95,15 +95,15 @@
         }, false);
       })();
 
-    
+
 
   </script>
 
   <script>
-  $(document).ready(function() 
-  { 
+  $(document).ready(function()
+  {
       $("form").submit(function () {
-        
+
         if($(this).valid()){
             $('.preL').fadeIn('fast');
             $('.preloader3').fadeIn('fast');

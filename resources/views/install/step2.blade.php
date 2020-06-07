@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ url('installer/css/custom.css') }}">
     <link rel="stylesheet" href="{{url('admin/bower_components/font-awesome/css/font-awesome.min.css')}}">
     <title>Installing App - Step 2 - Database Details</title>
-    
+
   </head>
   <body>
     @include('admin.message')
@@ -39,7 +39,7 @@
               <div class="col-md-6 mb-3">
                    <label for="DB_HOST">Database Host:</label>
                    <input name="DB_HOST" type="text" class="form-control" id="DB_HOST" placeholder="localhost" value="{{ env('DB_HOST') }}" required>
-                  
+
                   <div class="invalid-feedback">
                       Please enter a datbase host name.
                   </div>
@@ -48,7 +48,7 @@
               <div class="col-md-6 mb-3">
                    <label for="DB_PORT">Database Port:</label>
                    <input name="DB_PORT" type="text" class="form-control" id="DB_PORT" placeholder="3306" value="{{ env('DB_PORT') }}" required>
-                  
+
                   <div class="invalid-feedback">
                       Please enter a datbase port.
                   </div>
@@ -57,7 +57,7 @@
               <div class="col-md-6 mb-3">
                    <label for="DB_DATABASE">Database Name:</label>
                    <input name="DB_DATABASE" type="text" class="form-control" id="DB_DATABASE" placeholder="db_name" value="{{ env('DB_DATABASE') }}" required>
-                  
+
                   <div class="invalid-feedback">
                       Please enter a database name.
                   </div>
@@ -66,7 +66,7 @@
               <div class="col-md-6 mb-3">
                    <label for="DB_USERNAME">Database Username:</label>
                    <input name="DB_USERNAME" type="text" class="form-control" id="DB_USERNAME" placeholder="root" value="{{ env('DB_USERNAME') }}" required>
-                  
+
                   <div class="invalid-feedback">
                       Please enter a datbase username.
                   </div>
@@ -75,7 +75,7 @@
               <div class="col-md-6 mb-3">
                    <label for="DB_PASSWORD">Database Password:</label>
                    <input name="DB_PASSWORD" type="password" class="form-control" id="DB_PASSWORD" placeholder="*****" value="{{ env('DB_PASSWORD') }}">
-                  
+
                   <div class="valid-feedback">
                         Password can be blank if you testing it on localhost !
                    </div>
@@ -85,12 +85,12 @@
               <button class="float-right step1btn btn btn-primary" type="submit">Continue to Step 3...</button>
 
             </form>
-              
+
    				</div>
    			</div>
-        <p class="text-center m-3 text-white">&copy;{{ date('Y') }} | eClass - Learning Management System | Installer v1.0 | <a class="text-white" href="http://mediacity.co.in">Mediacity</a></p>
+        <p class="text-center m-3 text-white">&copy;{{ date('Y') }} | Dynamo eClass - Learning Management System | Installer v1.0 | <a class="text-white" href="http://dynamowebs.com"Dynamowebs/a></p>
    		</div>
-      
+
       <div class="corner-ribbon bottom-right sticky green shadow">Step 2 </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -125,8 +125,8 @@
     <script>
     (function() {
       'use strict';
-        $(function() 
-        { 
+        $(function()
+        {
           $("form").submit(function () {
             if($(this).valid()){
                 $('.preL').fadeIn('fast');

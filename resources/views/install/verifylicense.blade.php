@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="{{ url('installer/css/shards.min.css') }}">
     <link rel="stylesheet" href="{{ url('installer/css/custom.css') }}">
     <title>Installing App - Step  - Verify Purchase</title>
-    
+
   </head>
   <body>
-      
+
       <div class="preL display-none">
         <div class="preloader3 display-none"></div>
       </div>
@@ -24,17 +24,17 @@
               <h3 class="m-3 text-center text-dark ">
                   Verify Your Purchase
               </h3>
-          </div> 
-          <div class="card-body" id="stepbox">                    
+          </div>
+          <div class="card-body" id="stepbox">
           @if($errors->any())
             <h6 class="alert alert-error">{{$errors->first()}}</h6>
           @endif
             <h5> Please purchase a valid license or verify your purchase code with author.</h5>
           </div>
         </div>
-        <p class="text-center m-3 text-white">&copy;{{ date('Y') }} | eClass - Learning Management System | Installer v1.0 | <a class="text-white" href="http://mediacity.co.in">Mediacity</a></p>
+        <p class="text-center m-3 text-white">&copy;{{ date('Y') }} | Dynamo eClass - Learning Management System | Installer v1.0 | <a class="text-white" href="http://dynamowebs.com"Dynamowebs/a></p>
       </div>
-      
+
       <div class="corner-ribbon bottom-right sticky green shadow"> </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -46,6 +46,6 @@
     <script src="{{ url('installer/js/bootstrap.min.js') }}"></script>
 
     <script src="{{ url('installer/js/shards.min.js') }}"></script>
-    
+
 </body>
 </html>

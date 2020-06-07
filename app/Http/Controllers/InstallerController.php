@@ -565,7 +565,7 @@ class InstallerController extends Controller
         $ch = curl_init();
 
         $options = array(
-            CURLOPT_URL => "https://mediacity.co.in/purchase/public/api/updatestatus",
+            CURLOPT_URL => "https://dynamowebs.com/purchase/public/api/updatestatus",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_TIMEOUT => 20,
             CURLOPT_POSTFIELDS => "status={$status}&domain={$domain}",

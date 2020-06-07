@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="{{ url('installer/css/custom.css') }}">
     <link rel="stylesheet" href="{{url('admin/bower_components/font-awesome/css/font-awesome.min.css')}}">
     <title>Installing App - Step 3 - Basic Settings</title>
-    
+
   </head>
   <body>
-   	  
+
       <div class="preL display-none">
         <div class="preloader3 display-none"></div>
       </div>
@@ -32,11 +32,11 @@
                    <h3>Site Setting</h3>
                    <hr>
                   <div class="form-row">
-                   
+
                     <br>
                     <div class="col-md-6 mb-3">
                       <label for="validationCustom01">Project Title:</label>
-                      <input name="project_name" type="text" class="form-control" id="validationCustom01" placeholder="eClass - Learning Management System" value="" required>
+                      <input name="project_name" type="text" class="form-control" id="validationCustom01" placeholder="Dynamo eClass - Learning Management System" value="" required>
                       <div class="valid-feedback">
                         Looks good!
                       </div>
@@ -47,7 +47,7 @@
                     <div class="col-md-6 mb-3">
                       <label for="validationCustom01">Project Description:</label>
                       <input name="project_desc" type="text" class="form-control" id="validationCustom01" placeholder="this is our project" value="">
-                      
+
                     </div>
 
                      <div class="col-md-6 mb-3">
@@ -83,9 +83,9 @@
                       <br>
                        <img id="fav-prev" align="center" class="img-fluid" src="" alt="">
                     </div>
-                    
+
                   </div>
-                
+
                   <hr>
                   <div class="form-row">
                     <div class="col-md-6 mb-3">
@@ -117,15 +117,15 @@
                     </div>
                   </div>
                   <hr>
-               
-                  
+
+
                 <button class="float-right step1btn btn btn-primary" type="submit">Continue to Step 4...</button>
               </form>
    				</div>
    			</div>
-        <p class="text-center m-3 text-white">&copy;{{ date('Y') }} | eClass - Learning Management System | Installer v1.0 | <a class="text-white" href="http://mediacity.co.in">Mediacity</a></p>
+        <p class="text-center m-3 text-white">&copy;{{ date('Y') }} | Dynamo eClass - Learning Management System | Installer v1.0 | <a class="text-white" href="http://dynamowebs.com"Dynamowebs/a></p>
    		</div>
-      
+
       <div class="corner-ribbon bottom-right sticky green shadow">Step 3 </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -141,7 +141,7 @@
     @yield('script-zone')
 
     <script>
-     
+
       function readURL1(input) {
 
         if (input.files && input.files[0]) {

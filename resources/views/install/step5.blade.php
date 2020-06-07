@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="{{ url('installer/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ url('installer/css/bootstrap-toggle.min.css') }}">
     <title>Installing App - Step 5 - Store Creation</title>
-    
+
   </head>
   <body>
-   	  
+
     <div class="preL display-none">
       <div class="preloader3 display-none"></div>
     </div>
@@ -34,10 +34,10 @@
             <hr>
             <div class="form-row">
               <br>
-             
+
               <div class="col-md-6 mb-3">
                 <label for="">Right Click: </label>
-                <br>          
+                <br>
                 <input name="rightclick"  id="toggle-one" checked type="checkbox">
               </div>
 
@@ -49,7 +49,7 @@
 
               <div class="col-md-6 mb-3">
                 <label for="">Become An Instructor: </label>
-                <br>          
+                <br>
                 <input name="instructor_enable"  id="toggle-three" checked type="checkbox">
               </div>
 
@@ -58,8 +58,8 @@
                 <br>
                 <input name="wel_email"  id="toggle-four" checked type="checkbox">
               </div>
-              
-              
+
+
             </div>
 
             <button class="float-right step1btn btn btn-primary" type="submit">Finish...</button>
@@ -67,9 +67,9 @@
           </form>
  				</div>
  			</div>
-      <p class="text-center m-3 text-white">&copy;{{ date('Y') }} | eClass - Learning Management System | Installer v1.0 | <a class="text-white" href="http://mediacity.co.in">Mediacity</a></p>
+      <p class="text-center m-3 text-white">&copy;{{ date('Y') }} | Dynamo eClass - Learning Management System | Installer v1.0 | <a class="text-white" href="http://dynamowebs.com"Dynamowebs/a></p>
  		</div>
-      
+
     <div class="corner-ribbon bottom-right sticky green shadow">Final Phase </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="{{ url('installer/js/jquery-3.4.1.min.js') }}"></script>
@@ -106,8 +106,8 @@
       (function() {
         'use strict';
 
-        $(function() 
-        { 
+        $(function()
+        {
           $("form").submit(function () {
               if($(this).valid()){
                 $('.preL').fadeIn('fast');
@@ -116,11 +116,11 @@
                 $('body').attr('scroll','no');
                 $('body').css('overflow','hidden');
               }
-              
+
           });
-        
+
       });
- 
+
       $(function() {
         $('#toggle-one').bootstrapToggle();
         $('#toggle-two').bootstrapToggle();

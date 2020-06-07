@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ url('installer/css/custom.css') }}">
     <link rel="stylesheet" href="{{url('admin/bower_components/font-awesome/css/font-awesome.min.css')}}">
     <title>Installing App - Step 1 - Basic Details</title>
-    
+
   </head>
   <body>
       <div class="preL display-none">
@@ -31,11 +31,11 @@
                    <h3>Basic Details</h3>
                    <hr>
                   <div class="form-row">
-                   
+
                     <br>
                     <div class="col-md-6 mb-3">
                       <label for="validationCustom01">App/Project Name:</label>
-                      <input name="APP_NAME" type="text" class="form-control" id="validationCustom01" placeholder="eClass - Learning Management System |" value="{{ env('APP_NAME') }}" required>
+                      <input name="APP_NAME" type="text" class="form-control" id="validationCustom01" placeholder="Dynamo eClass - Learning Management System |" value="{{ env('APP_NAME') }}" required>
                       <div class="valid-feedback">
                         Looks good!
                       </div>
@@ -43,7 +43,7 @@
                           Please choose a app name.
                       </div>
                     </div>
-                    
+
                      <div class="col-md-6 mb-3">
                       <label for="validationCustom01">App URL:</label>
                       <input name="APP_URL" type="url" class="form-control" id="validationCustom01" placeholder="http://" value="{{ env('APP_URL') }}" required>
@@ -54,7 +54,7 @@
                           Please enter app url.
                       </div>
                     </div>
-                    
+
                   </div>
                   <h3>Mail Details</h3>
                   <hr>
@@ -143,14 +143,14 @@
                     </div>
 
                   </div>
-                  
+
                 <button class="float-right step1btn btn btn-primary" type="submit">Continue to Step 2...</button>
               </form>
    				</div>
    			</div>
-        <p class="text-center m-3 text-white">&copy;{{ date('Y') }} | eClass - Learning Management System | Installer v1.0 | <a class="text-white" href="http://mediacity.co.in">Mediacity</a></p>
+        <p class="text-center m-3 text-white">&copy;{{ date('Y') }} | Dynamo eClass - Learning Management System | Installer v1.0 | <a class="text-white" href="http://dynamowebs.com"Dynamowebs/a></p>
    		</div>
-      
+
       <div class="corner-ribbon bottom-right sticky green shadow">Step 1 </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="{{ url('installer/js/jquery-3.4.1.min.js') }}"></script>
@@ -184,8 +184,8 @@
   <script>
     (function() {
       'use strict';
-        $(function() 
-        { 
+        $(function()
+        {
           $("form").submit(function () {
             if($(this).valid()){
                 $('.preL').fadeIn('fast');

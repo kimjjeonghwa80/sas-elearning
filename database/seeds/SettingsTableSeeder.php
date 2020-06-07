@@ -12,15 +12,15 @@ class SettingsTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('settings')->delete();
-        
+
         \DB::table('settings')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 1,
-                'project_title' => 'eClass - Learning Management System',
+                'project_title' => 'Dynamo eClass - Learning Management System',
                 'logo' => 'logo_1580964460logo2.png',
                 'favicon' => 'favicon.png',
                 'cpy_txt' => 'Copyright © 2020 eClass.',
@@ -43,7 +43,7 @@ class SettingsTableSeeder extends Seeder
                 'paystack_enable' => 1,
                 'w_email_enable' => 1,
                 'verify_enable' => 0,
-                'wel_email' => 'admin@mediacity.co.in',
+                'wel_email' => 'admin@dynamowebs.com',
                 'default_address' => 'Comapny 12345 South Main Street Anywhere',
                 'default_phone' => '9123456789',
                 'instructor_enable' => 1,
@@ -52,7 +52,7 @@ class SettingsTableSeeder extends Seeder
                 'updated_at' => '2020-02-06 10:24:31',
             ),
         ));
-        
-        
+
+
     }
 }

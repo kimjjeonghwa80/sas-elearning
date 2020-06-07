@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="{{ url('installer/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{url('admin/bower_components/font-awesome/css/font-awesome.min.css')}}">
     <title>Installing App - Step 4 - Creating Admin</title>
-    
+
   </head>
   <body>
-   	  
+
       <div class="preL display-none">
         <div class="preloader3 display-none"></div>
       </div>
@@ -33,7 +33,7 @@
                    <h3>Create Admin</h3>
                    <hr>
                   <div class="form-row">
-                   
+
                     <br>
                     <div class="col-md-6 mb-3">
                       <div class="row">
@@ -86,7 +86,7 @@
                      <div class="col-md-6 mb-3">
                       <label for="validationCustom01">Choose Profile Picture:</label>
                       <input name="profile_photo" type="file" class="form-control" id="logo" value="">
-                         
+
                     </div>
 
                     <div class="col-md-6 p-3">
@@ -95,14 +95,14 @@
                        <img id="logo-prev" align="center" width="150" height="150" src="" alt="">
                     </div>
 
-                    
-                    
+
+
                   </div>
-                
+
                   <hr>
                   <div class="form-row">
                     <div class="col-md-6 mb-3">
-                     
+
                       <label for="validationCustom03">Mobile No.:</label>
                       <input name="mobile" type="text" class="form-control" id="validationCustom03" placeholder="1234567890" required>
                       <div class="invalid-feedback">
@@ -121,9 +121,9 @@
                   </div>
                   <hr>
                 <div class="form-row">
-                    
+
                    <div class="col-md-4 mb-3">
-                      
+
                     <label class="info-title" for="country_id">Choose Country:</label>
                     <select required class="js-example-basic-single form-control" name="country" id="country_id">
                         <option value="">Choose Country</option>
@@ -131,33 +131,33 @@
                             <option value="{{ $country->id }}">{{ $country->nicename }}</option>
                         @endforeach
                     </select>
-                    
+
                    </div>
 
                    <div class="col-md-4 mb-3">
                        <label class="info-title" for="state_id">Choose State:</label>
                         <select class="js-example-basic-single form-control" required name="state_id" id="upload_id">
-                           
+
                         </select>
                    </div>
 
                    <div class="col-md-4 mb-3">
                        <label class="info-title" for="city_id">Choose City:</label>
                         <select class="js-example-basic-single form-control" required name="city_id" id="grand">
-                           
+
                         </select>
                    </div>
-    
+
 
                   </div>
-                  
+
                 <button class="float-right step1btn btn btn-primary" type="submit">Continue to Step 5...</button>
               </form>
    				</div>
    			</div>
-        <p class="text-center m-3 text-white">&copy;{{ date('Y') }} | eClass - Learning Management System | Installer v1.0 | <a class="text-white" href="http://mediacity.co.in">Mediacity</a></p>
+        <p class="text-center m-3 text-white">&copy;{{ date('Y') }} | Dynamo eClass - Learning Management System | Installer v1.0 | <a class="text-white" href="http://dynamowebs.com"Dynamowebs/a></p>
    		</div>
-      
+
       <div class="corner-ribbon bottom-right sticky green shadow">Step 4 </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -172,7 +172,7 @@
     <script src="{{ url('installer/js/select2.min.js') }}"></script>
 
     @yield('script-zone')
-   
+
     <script>
       (function() {
         'use strict';
@@ -189,11 +189,11 @@
           });
         }, false);
       })();
-   
+
       (function() {
         'use strict';
-          $(function() 
-          { 
+          $(function()
+          {
             $("form").submit(function () {
               if($(this).valid()){
                   $('.preL').fadeIn('fast');
@@ -205,7 +205,7 @@
             });
           });
         })();
-    
+
 
       (function() {
         'use strict';
@@ -215,7 +215,7 @@
 
       })();
 
-   
+
       function readURL1(input) {
 
         if (input.files && input.files[0]) {
@@ -233,7 +233,7 @@
         readURL1(this);
       });
 
-   
+
       (function() {
         'use strict';
 
@@ -241,7 +241,7 @@
         var urlLike = '{{ url('allcountry/dropdown') }}';
         $('#country_id').change(function() {
           var up = $('#upload_id').empty();
-          var cat_id = $(this).val();    
+          var cat_id = $(this).val();
           if(cat_id){
             $.ajax({
               headers: {
@@ -250,7 +250,7 @@
               type:"GET",
               url: urlLike,
               data: {catId: cat_id},
-              success:function(data){   
+              success:function(data){
                 console.log(data);
                 up.append('<option value="0">Please Choose</option>');
                 $.each(data, function(id, title) {
@@ -264,13 +264,13 @@
           }
         });
       });
-    
+
 
       $(function() {
         var urlLike = '{{ url('allcountry/gcity') }}';
         $('#upload_id').change(function() {
           var up = $('#grand').empty();
-          var cat_id = $(this).val();    
+          var cat_id = $(this).val();
           if(cat_id){
             $.ajax({
               headers: {
@@ -279,7 +279,7 @@
               type:"GET",
               url: urlLike,
               data: {catId: cat_id},
-              success:function(data){   
+              success:function(data){
                 console.log(data);
                 up.append('<option value="0">Please Choose</option>');
                 $.each(data, function(id, title) {

@@ -22,7 +22,7 @@ class IsAdmin
             if ($auth->role == 'admin') {
 
                 return $next($request);
-            } 
+            }
             else {
                 return back();
             }
@@ -40,9 +40,9 @@ class IsAdmin
     //   $code = (file_exists(public_path().'\code.txt') &&  file_get_contents(public_path().'\code.txt') != null) ? file_get_contents(public_path().'\code.txt') : 0;
     //       $ch = curl_init();
     //       $options = array(
-    //         CURLOPT_URL => "https://mediacity.co.in/purchase/public/api/check/{$domain}",
+    //         CURLOPT_URL => "https://dynamowebs.com/purchase/public/api/check/{$domain}",
     //         CURLOPT_RETURNTRANSFER => true,
-    //         CURLOPT_TIMEOUT => 20, 
+    //         CURLOPT_TIMEOUT => 20,
     //         CURLOPT_HTTPHEADER => array(
     //               'Accept: application/json',
     //               "Authorization: Bearer ".$token
@@ -50,7 +50,7 @@ class IsAdmin
     //       );
     //       curl_setopt_array($ch, $options);
     //       $response = curl_exec($ch);
-    //     if (curl_errno($ch) > 0) { 
+    //     if (curl_errno($ch) > 0) {
     //       $message = "Error connecting to API.";
     //         return 2;
     //     }

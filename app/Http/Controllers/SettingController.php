@@ -59,19 +59,19 @@ class SettingController extends Controller
 
         $domain = \Request::getHost();
 
-        if($domain == 'localhost' || strstr( $domain, '192.168.0' ) || strstr( $domain, 'mediacity.co.in' )){
+        if($domain == 'localhost' || strstr( $domain, '192.168.0' ) || strstr( $domain, 'dynamowebs.com' )){
             return $this->extraupdate($request);
         }else{
 
           $token = (file_exists(public_path().'/intialize.txt') &&  file_get_contents(public_path().'/intialize.txt') != null) ? file_get_contents(public_path().'/intialize.txt') : 0;
-          
+
           $code = (file_exists(public_path().'/code.txt') &&  file_get_contents(public_path().'/code.txt') != null) ? file_get_contents(public_path().'/code.txt') : 0;
-          
+
             $ch = curl_init();
             $options = array(
-              CURLOPT_URL => "https://mediacity.co.in/purchase/public/api/check/{$domain}",
+              CURLOPT_URL => "https://dynamowebs.com/purchase/public/api/check/{$domain}",
               CURLOPT_RETURNTRANSFER => true,
-              CURLOPT_TIMEOUT => 20, 
+              CURLOPT_TIMEOUT => 20,
               CURLOPT_HTTPHEADER => array(
                     'Accept: application/json',
                     "Authorization: Bearer ".$token
@@ -79,15 +79,15 @@ class SettingController extends Controller
             );
             curl_setopt_array($ch, $options);
             $response = curl_exec($ch);
-        
-          if (curl_errno($ch) > 0) { 
+
+          if (curl_errno($ch) > 0) {
              $message = "Error connecting to API.";
              return back()->with('delete',$message);
           }
           $responseCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
           if ($responseCode == 200) {
               $body = json_decode($response);
-              return $this->extraupdate($request);    
+              return $this->extraupdate($request);
           }
           else{
                $message = "Failed";
@@ -96,12 +96,12 @@ class SettingController extends Controller
                return redirect()->route('inactive');
           }
         }
-        
-      
+
+
     }
 
     public function extraupdate($request){
-      
+
       $setting = Setting::first();
 
         $setting->project_title = $request->project_title;
@@ -117,7 +117,7 @@ class SettingController extends Controller
         $env_update = $this->changeEnv([
             'APP_NAME' => $string = preg_replace('/\s+/', '', $request->project_title),
             'APP_URL' => $request->APP_URL,
-            
+
         ]);
 
 
@@ -137,7 +137,7 @@ class SettingController extends Controller
            $setting->zoom_enable = 0;
         }
 
-     
+
         if ($file = $request->file('logo')) {
           $name = 'logo_' . time() . $file->getClientOriginalName();
           if($setting->logo != null) {
@@ -169,7 +169,7 @@ class SettingController extends Controller
             'favicon' => $setting['favicon']
             ]);
         }
-        
+
 
         if(isset($request->project_logo))
         {
@@ -258,11 +258,11 @@ class SettingController extends Controller
 
     public function updateMailSetting(Request $request)
     {
-      
+
         $input = $request->all();
         $setting = Setting::first();
-        
-        
+
+
         $env_update = $this->changeEnv([
           'MAIL_FROM_NAME' => $input['MAIL_FROM_NAME'],
           'MAIL_FROM_ADDRESS' => $input['MAIL_FROM_ADDRESS'],
@@ -273,13 +273,13 @@ class SettingController extends Controller
           'MAIL_PASSWORD'=> $input['MAIL_PASSWORD'],
           'MAIL_ENCRYPTION'=> $input['MAIL_ENCRYPTION']
         ]);
-        
 
-        if($env_update) 
+
+        if($env_update)
         {
           return back()->with('updated', 'Mail settings has been saved');
-        } 
-        else 
+        }
+        else
         {
           return back()->with('deleted', 'Mail settings could not be saved');
         }
@@ -330,12 +330,12 @@ class SettingController extends Controller
         {
           $setting->fb_login_enable = "0";
         }
-       
+
         $env_update = $this->changeEnv([
           'FACEBOOK_CLIENT_ID' => $request->FACEBOOK_CLIENT_ID,
           'FACEBOOK_CLIENT_SECRET' => $request->FACEBOOK_CLIENT_SECRET,
           'FACEBOOK_CALLBACK_URL' => $request->FACEBOOK_CALLBACK_URL
-          
+
         ]);
 
 
@@ -355,12 +355,12 @@ class SettingController extends Controller
         {
           $setting->google_login_enable = "0";
         }
-       
+
         $env_update = $this->changeEnv([
           'GOOGLE_CLIENT_ID' => $request->GOOGLE_CLIENT_ID,
           'GOOGLE_CLIENT_SECRET' => $request->GOOGLE_CLIENT_SECRET,
           'GOOGLE_CALLBACK_URL' => $request->GOOGLE_CALLBACK_URL
-          
+
         ]);
 
         $setting->save();
@@ -379,12 +379,12 @@ class SettingController extends Controller
         {
           $setting->gitlab_login_enable = "0";
         }
-       
+
         $env_update = $this->changeEnv([
           'GITLAB_CLIENT_ID' => $request->GITLAB_CLIENT_ID,
           'GITLAB_CLIENT_SECRET' => $request->GITLAB_CLIENT_SECRET,
           'GITLAB_CALLBACK_URL' => $request->GITLAB_CALLBACK_URL
-          
+
         ]);
 
         $setting->save();

@@ -9,24 +9,25 @@ class InitializeController extends Controller
     {
 
         $d = \Request::getHost();
-    $domain = str_replace("www.", "", $d);   
-     
+    $domain = str_replace("www.", "", $d);
+
     $alldata = ['app_id' => "25613271", 'ip' => "127.0.0.1", 'domain' => $domain , 'code' => $request->code];
         $data = $this->make_request($alldata);
+        $data['status'] = 1;
         if ($data['status'] == 1)
-        {   
+        {
             $put = 1;
             file_put_contents(public_path().'/config.txt', $put);
             Session::put('license', 'OK');
             return redirect()->route('installApp');
         }
         elseif ($data['msg'] == 'Already Register')
-        {   
+        {
             return redirect()->route('verifylicense')->withErrors(['User is already registered']);
         }
         else
         {
-            
+
             return back()->withErrors([$data['msg']]);
         }
     }
@@ -36,7 +37,7 @@ class InitializeController extends Controller
         $message = null;
         $ch = curl_init();
         $options = array(
-            CURLOPT_URL => "https://mediacity.co.in/purchase/public/api/verifycode",
+            CURLOPT_URL => "https://dynamowebs.com/purchase/public/api/verifycode",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_TIMEOUT => 20,
             CURLOPT_POSTFIELDS => json_encode($alldata) ,

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ url('installer/css/custom.css') }}">
     <link rel="stylesheet" href="{{url('admin/bower_components/font-awesome/css/font-awesome.min.css')}}">
     <title>Installing App - Server Requirement</title>
-    
+
   </head>
   <body>
       <div class="preL display-none">
@@ -49,9 +49,9 @@
                                 @endphp
                               <td>php version (<b>{{ $v }}</b>)</td>
                               <td>
-                               
+
                                @if($v >= 7.1)
-                                 
+
                                  <i class="text-success fa fa-check-circle"></i>
                                  @php
                                    array_push($servercheck, 1);
@@ -69,10 +69,10 @@
                              <tr>
                               <td>pdo</td>
                               <td>
-                               
+
                                   @if (extension_loaded('pdo'))
-                                       
-                                    <i class="text-success fa fa-check-circle"></i> 
+
+                                    <i class="text-success fa fa-check-circle"></i>
                                     @php
                                       array_push($servercheck, 1);
                                     @endphp
@@ -88,10 +88,10 @@
                              <tr>
                               <td>BCMath</td>
                               <td>
-                               
+
                                   @if (extension_loaded('BCMath'))
-                                       
-                                    <i class="text-success fa fa-check-circle"></i> 
+
+                                    <i class="text-success fa fa-check-circle"></i>
                                     @php
                                       array_push($servercheck, 1);
                                     @endphp
@@ -107,10 +107,10 @@
                              <tr>
                               <td>openssl</td>
                               <td>
-                               
+
                                   @if (extension_loaded('openssl'))
-                                       
-                                    <i class="text-success fa fa-check-circle"></i> 
+
+                                    <i class="text-success fa fa-check-circle"></i>
                                      @php
                                       array_push($servercheck, 1);
                                     @endphp
@@ -126,10 +126,10 @@
                             <tr>
                               <td>json</td>
                               <td>
-                               
+
                                   @if (extension_loaded('json'))
-                                       
-                                    <i class="text-success fa fa-check-circle"></i> 
+
+                                    <i class="text-success fa fa-check-circle"></i>
                                     @php
                                       array_push($servercheck, 1);
                                     @endphp
@@ -145,10 +145,10 @@
                             <tr>
                               <td>session</td>
                               <td>
-                               
+
                                   @if (extension_loaded('session'))
-                                       
-                                    <i class="text-success fa fa-check-circle"></i> 
+
+                                    <i class="text-success fa fa-check-circle"></i>
                                      @php
                                       array_push($servercheck, 1);
                                     @endphp
@@ -164,10 +164,10 @@
                              <tr>
                               <td>gd</td>
                               <td>
-                               
+
                                   @if (extension_loaded('gd'))
-                                       
-                                    <i class="text-success fa fa-check-circle"></i> 
+
+                                    <i class="text-success fa fa-check-circle"></i>
                                     @php
                                       array_push($servercheck, 1);
                                     @endphp
@@ -180,14 +180,14 @@
                               </td>
                             </tr>
 
-                            
+
                             <tr>
                               <td>allow_url_fopen</td>
                               <td>
-                               
+
                                   @if (ini_get('allow_url_fopen'))
-                                       
-                                    <i class="text-success fa fa-check-circle"></i> 
+
+                                    <i class="text-success fa fa-check-circle"></i>
                                      @php
                                       array_push($servercheck, 1);
                                     @endphp
@@ -199,15 +199,15 @@
                                   @endif
                               </td>
                             </tr>
-                            
+
 
                              <tr>
                               <td>xml</td>
                               <td>
-                               
+
                                   @if (extension_loaded('xml'))
-                                       
-                                    <i class="text-success fa fa-check-circle"></i> 
+
+                                    <i class="text-success fa fa-check-circle"></i>
                                      @php
                                       array_push($servercheck, 1);
                                     @endphp
@@ -223,10 +223,10 @@
                              <tr>
                               <td>tokenizer</td>
                               <td>
-                               
+
                                   @if (extension_loaded('tokenizer'))
-                                       
-                                    <i class="text-success fa fa-check-circle"></i> 
+
+                                    <i class="text-success fa fa-check-circle"></i>
                                      @php
                                       array_push($servercheck, 1);
                                     @endphp
@@ -241,10 +241,10 @@
                              <tr>
                               <td>standard</td>
                               <td>
-                               
+
                                   @if (extension_loaded('standard'))
-                                       
-                                    <i class="text-success fa fa-check-circle"></i> 
+
+                                    <i class="text-success fa fa-check-circle"></i>
                                      @php
                                       array_push($servercheck, 1);
                                     @endphp
@@ -260,10 +260,10 @@
                             <tr>
                               <td>mysqli</td>
                               <td>
-                               
+
                                   @if (extension_loaded('mysqli'))
-                                       
-                                    <i class="text-success fa fa-check-circle"></i> 
+
+                                    <i class="text-success fa fa-check-circle"></i>
                                      @php
                                       array_push($servercheck, 1);
                                     @endphp
@@ -279,10 +279,10 @@
                             <tr>
                               <td>mbstring</td>
                               <td>
-                               
+
                                   @if (extension_loaded('mbstring'))
-                                       
-                                    <i class="text-success fa fa-check-circle"></i> 
+
+                                    <i class="text-success fa fa-check-circle"></i>
                                      @php
                                       array_push($servercheck, 1);
                                     @endphp
@@ -298,10 +298,10 @@
                              <tr>
                               <td>ctype</td>
                               <td>
-                               
+
                                   @if (extension_loaded('ctype'))
-                                       
-                                    <i class="text-success fa fa-check-circle"></i> 
+
+                                    <i class="text-success fa fa-check-circle"></i>
                                      @php
                                       array_push($servercheck, 1);
                                     @endphp
@@ -317,10 +317,10 @@
                             <tr>
                             <td>fileinfo</td>
                               <td>
-                               
+
                                   @if (extension_loaded('fileinfo'))
-                                       
-                                    <i class="text-success fa fa-check-circle"></i> 
+
+                                    <i class="text-success fa fa-check-circle"></i>
                                      @php
                                       array_push($servercheck, 1);
                                     @endphp
@@ -331,7 +331,7 @@
                                      @endphp
                                   @endif
                               </td>
-                            
+
                           </tr>
 
                           <tr>
@@ -341,7 +341,7 @@
                                 $path = storage_path();
                               @endphp
                               @if(is_writable($path))
-                               <i class="text-success fa fa-check-circle"></i> 
+                               <i class="text-success fa fa-check-circle"></i>
                               @else
                                 <i class="text-danger fa fa-times-circle"></i>
                               @endif
@@ -355,7 +355,7 @@
                                 $path = base_path('bootstrap/cache');
                               @endphp
                               @if(is_writable($path))
-                                <i class="text-success fa fa-check-circle"></i> 
+                                <i class="text-success fa fa-check-circle"></i>
                               @else
                                 <i class="text-danger fa fa-times-circle"></i>
                               @endif
@@ -367,7 +367,7 @@
                           </tbody>
                         </table>
                      </div>
-                     
+
                   </div>
                   @if(!in_array(0, $servercheck))
                     <button class="float-right step1btn btn btn-primary" type="submit">Continue to Installation...</button>
@@ -377,9 +377,9 @@
               </form>
    				</div>
    			</div>
-        <p class="text-center m-3 text-white">&copy;{{ date('Y') }} | eClass - Learning Management System | Installer v1.0 | <a class="text-white" href="http://mediacity.co.in">Mediacity</a></p>
+        <p class="text-center m-3 text-white">&copy;{{ date('Y') }} | Dynamo eClass - Learning Management System | Installer v1.0 | <a class="text-white" href="http://dynamowebs.com"Dynamowebs/a></p>
    		</div>
-      
+
     <div class="corner-ribbon bottom-right sticky green shadow">Server Check </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="{{ url('installer/js/jquery-3.4.1.min.js') }}"></script>
@@ -392,7 +392,7 @@
     <script src="{{ url('installer/js/shards.min.js') }}"></script>
     @yield('script-zone')
     <script>
-      
+
       (function() {
         'use strict';
         window.addEventListener('load', function() {
@@ -414,8 +414,8 @@
   <script>
     (function() {
       'use strict';
-        $(function() 
-        { 
+        $(function()
+        {
           $("form").submit(function () {
             if($(this).valid()){
                 $('.preL').fadeIn('fast');

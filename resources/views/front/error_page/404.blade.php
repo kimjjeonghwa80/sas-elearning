@@ -3,8 +3,8 @@
 **********************************************************************************************************
     Copyright (c) 2019.
 **********************************************************************************************************  -->
-<!-- 
-Template Name: eClass - Learning Management System
+<!--
+Template Name: Dynamo eClass - Learning Management System
 Version: 1.0.0
 Author: Media City
 -->
@@ -41,7 +41,7 @@ Author: Media City
 <!-- top-nav bar start-->
 <section id="error" class="error-page-main-block">
     <div class="container-fluid">
-        <div class="error-block text-center "> 
+        <div class="error-block text-center ">
             <h1 class="error-heading"><span>404 </span></br>page not found!</h1>
             <p>This page isn't avalible. sorry about that.</p>
             <p class="btm-40">Try searching for something else.</p>
@@ -55,16 +55,16 @@ Author: Media City
 <!-- jquery -->
 <script src="{{ url('js/jquery-2.min.js') }}"></script> <!-- jquery library js -->
 <script src="{{ url('js/bootstrap.bundle.js') }}"></script> <!-- bootstrap js -->
-<script src="{{ url('vendor/owl/js/owl.carousel.min.js') }}"></script> <!-- owl carousel js --> 
+<script src="{{ url('vendor/owl/js/owl.carousel.min.js') }}"></script> <!-- owl carousel js -->
 <script src="{{ url('vendor/smoothscroll/smooth-scroll.js') }}"></script> <!-- smooth scroll js -->
 <script src="{{ url('vendor/popup/jquery.magnific-popup.min.js')}}"></script> <!-- popup js-->
 <script src="{{ url('vendor/protip/protip.js') }}"></script> <!-- bootstrap js -->
-<script src="{{ url('vendor/navigation/menumaker.js') }}"></script> <!-- navigation js--> 
-<script src="{{ url('vendor/mailchimp/jquery.ajaxchimp.js') }}"></script> <!-- mail chimp js --> 
+<script src="{{ url('vendor/navigation/menumaker.js') }}"></script> <!-- navigation js-->
+<script src="{{ url('vendor/mailchimp/jquery.ajaxchimp.js') }}"></script> <!-- mail chimp js -->
 <script src="{{ url('vendor/counter/waypoints.min.js') }}"></script> <!-- facts count js required for jquery.counterup.js file -->
 <script src="{{ url('vendor/counter/jquery.counterup.js') }}"></script> <!-- facts count js-->
 <script src="{{ url('js/theme.js') }}"></script> <!-- custom js -->
 <!-- end jquery -->
 </body>
 <!-- body end -->
-</html> 
+</html>

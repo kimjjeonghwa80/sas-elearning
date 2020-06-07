@@ -3,8 +3,8 @@
 **********************************************************************************************************
     Copyright (c) 2020.
 **********************************************************************************************************  -->
-<!-- 
-Template Name: eClass - Learning Management System 
+<!--
+Template Name: Dynamo eClass - Learning Management System
 Version: 1.7.0
 Author: Media City
 -->
@@ -24,7 +24,7 @@ $rtl = array('ar','he','ur', 'arc', 'az', 'dv', 'ku'); //make a list of rtl lang
 <!-- end head -->
 <!-- body start-->
 <body>
-<!-- preloader --> 
+<!-- preloader -->
 @if($gsetting->preloader_enable == 1)
 <div class="preloader">
     <div class="status">
@@ -56,4 +56,4 @@ $rtl = array('ar','he','ur', 'arc', 'az', 'dv', 'ku'); //make a list of rtl lang
 <!-- end jquery -->
 </body>
 <!-- body end -->
-</html> 
+</html>
